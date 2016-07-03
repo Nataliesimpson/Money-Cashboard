@@ -5,12 +5,39 @@ require_relative( 'transaction')
 
 class Account
 
-  attr_reader( :transaction )
+  attr_reader :tags, :merchants, :transactions
 
-  def initialize(transactions)
-      # @transactions = params[:transactions]
-      @transactions = transactions
-    end
+  def initialize(params)
+    @tags = params['tags']
+    @merchants = params['merchants']
+    @transactions = params['transactions']
+  end
+
+  #functions
+  def all_transaction_amounts
+    transaction_array = @transactions.map { |transaction| transaction.amount }
+    return transaction_array
+  end
+
+  def most_expensive_transaction_amount
+    return all_transaction_amounts.max
+  end
+
+  def least_expensive_transaction_amount
+    return all_transaction_amounts.min
+  end
+
+  def total_expenditure
+    total = 0
+
+    @transactions.each {|transaction| total += transaction.amount}
+    return total
+  end
+
+
+
+
+
 
   # def balance
   #   balance = 0
