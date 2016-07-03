@@ -69,15 +69,19 @@ class TestAccount < Minitest::Test
   end
 
   def test_least_expensive_transaction
-     result = @account.least_expensive_transaction_amount
-     assert_equal(15, result)
+    result = @account.least_expensive_transaction_amount
+    assert_equal(15, result)
   end
 
   def test_total_expenditure
-     result = @account.total_expenditure
-     assert_equal(140, result)
+    result = @account.total_expenditure
+    assert_equal(140, result)
   end 
 
+  def test_total_balance
+    result = @account.total_balance
+    assert_equal(-140, result)
+  end  
 
 
 

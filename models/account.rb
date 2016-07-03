@@ -1,7 +1,9 @@
 require( 'pg' )
 require( 'pry-byebug' )
 require_relative('../db/sql_runner')
-require_relative( 'transaction')
+require_relative( 'tag' )
+require_relative( 'merchant' )
+require_relative( 'transaction' )
 
 class Account
 
@@ -34,22 +36,21 @@ class Account
     return total
   end
 
+  def total_balance
+    balance = 0
+    # @transactions.each do |transaction|
+    for transaction in @transactions
+
+      if transaction.debit_credit == 'credit'
+      balance += transaction.amount
+      elsif transaction.debit_credit == 'debit'
+      balance -= transaction.amount
+      end 
+    end
+    return balance
+  end  
 
 
 
 
-
-  # def balance
-  #   balance = 0
-  #   @transactions.each do |transaction| 
-  #     if transaction.debit_credit == "Credit"
-  #     balance += transaction.amount
-  #     elsif transaction.debit_credit == "Debit"
-  #     balance -= transaction.amount
-  #     end 
-  #   end
-  #   return balance
-  # end  
-
-
-end  
+end
