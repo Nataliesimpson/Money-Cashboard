@@ -4,8 +4,6 @@ require_relative('../db/sql_runner')
 
 class Merchant
 
-binding.pry
-
   attr_reader :id, :merchant_name   
 
   def initialize( options )

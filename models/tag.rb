@@ -18,4 +18,9 @@ class Tag
     return result
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM tags"
+    run_sql(sql)
+  end
+
 end
