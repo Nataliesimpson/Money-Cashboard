@@ -29,8 +29,8 @@ class Tag
   end
 
   def self.map_items( sql )
-    tags = run(sql)
-    result = tags.map { |tag| Book.new( tag ) }
+    tags = run_sql(sql)
+    result = tags.map { |tag| Tag.new( tag ) }
     return result
   end
 

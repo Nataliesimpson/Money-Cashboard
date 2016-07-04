@@ -38,8 +38,8 @@ class Transaction
   end
 
   def self.map_items( sql )
-    transactions = run(sql)
-    result = transactions.map { |transaction| Book.new( transaction ) }
+    transactions = run_sql(sql)
+    result = transactions.map { |transaction| Transaction.new( transaction ) }
     return result
   end
 

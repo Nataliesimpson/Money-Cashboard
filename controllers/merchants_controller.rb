@@ -1,15 +1,24 @@
 require_relative '../models/merchant'
 
+#new
+get '/merchants/new' do
+
+end
+
+#create
+
+#index
 get '/merchants' do
   @merchants = Merchant.all
   erb :'merchants/index'
 end
 
-# get '/vendors/new' do
-#   erb :'vendors/new'
-# end
+#show
+get '/merchants/:id' do
 
-# post '/vendors' do
-#   Vendor.create(params)
-#   redirect to('/vendors')
-# end
+end
+#edit
+
+#update
+
+#delete
