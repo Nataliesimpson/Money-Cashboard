@@ -50,6 +50,10 @@ class Account
     return balance
   end  
 
+  def total_number_transactions
+    total_number = @transactions.map
+    return total_number.count
+  end  
 
 
 

@@ -29,8 +29,8 @@ class Merchant
   end
 
   def self.map_items( sql )
-    merchant = run(sql)
-    result = merchant.map { |merchant| Book.new( merchant ) }
+    merchants = run(sql)
+    result = merchants.map { |merchant| Book.new( merchant ) }
     return result
   end
 

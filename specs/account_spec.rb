@@ -26,7 +26,7 @@ class TestAccount < Minitest::Test
       'amount' => 70,
       'debit_credit' => 'debit',
       'transaction_date' => '2016-06-30',
-      'transaction_time' => '12.30'
+      'transaction_time' => '12:30'
     })
     transaction2 = Transaction.new({
       'id' => 2,
@@ -36,7 +36,7 @@ class TestAccount < Minitest::Test
       'amount' => 15,
       'debit_credit' => 'debit',
       'transaction_date' => '2016-07-01',
-      'transaction_time' => '12.49'
+      'transaction_time' => '12:49'
     })
     transaction3 = Transaction.new({
       'id' => 3,
@@ -46,7 +46,7 @@ class TestAccount < Minitest::Test
       'amount' => 55,
       'debit_credit' => 'debit',
       'transcation_date' => '2016-07-02',
-      'transaction_time' => '13.03'
+      'transaction_time' => '13:03'
     })
      
     @tags = [tag1, tag2, tag3]
@@ -89,6 +89,10 @@ class TestAccount < Minitest::Test
     assert_equal(-140, result)
   end  
 
+  def test_total_number_transactions
+    result = @account.total_number_transactions
+    assert_equal(3, result)
+  end  
 
 
 end

@@ -32,6 +32,38 @@ class Transaction
     run_sql(sql)
   end
 
+  def self.all()
+    sql = "SELECT * FROM transactions"
+    return Transaction.map_items(sql)
+  end
+
+  def self.map_items( sql )
+    transactions = run(sql)
+    result = transactions.map { |transaction| Book.new( transaction ) }
+    return result
+  end
+
+  def self.map_item( sql )
+    result = Transaction.map_items(sql)
+    return result.first
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM transactions WHERE id = #{id}"
+    return Transaction.map_item( sql )
+  end 
+
+  def find_merchant()
+    sql = "SELECT * FROM merchants WHERE id = #{@merchant_id}"
+    return Merchant.map_item(sql)
+  end
+
+  def find_tag()
+    sql = "SELECT * FROM tags WHERE id = #{tag_id}"
+    return Tag.map_item(sql)
+  end
+
+ 
 
 
 
