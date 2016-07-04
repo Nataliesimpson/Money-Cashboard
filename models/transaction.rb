@@ -6,7 +6,7 @@ require_relative( 'merchant')
 
 class Transaction
 
-  attr_reader( :id, :merchant_id, :tag_id, :transaction_name, :amount, :debit_credit )
+  attr_reader( :id, :merchant_id, :tag_id, :transaction_name, :amount, :debit_credit, :transaction_date, :transaction_time )
 
   def initialize( options )
     @id = options['id'].to_i
@@ -15,13 +15,15 @@ class Transaction
     @transaction_name = options['transaction_name']
     @amount = options['amount'].to_i
     @debit_credit = options['debit_credit']
+    @transaction_date = options['transaction_date']
+    @transaction_time = options['transaction_time']
     # @date_time = DateTime.parse(options['date_time']).to_date
   end
 
   def save()
-    sql = "INSERT INTO transactions (merchant_id, tag_id, transaction_name, amount, debit_credit) VALUES ('#{ @merchant_id }', '#{ @tag_id }', '#{@transaction_name }', '#{@amount}', '#{@debit_credit}') RETURNING *"
-    tag_data = run_sql(sql).first
-    result = Tag.new(tag_data)
+    sql = "INSERT INTO transactions (merchant_id, tag_id, transaction_name, amount, debit_credit, transaction_date, transaction_time) VALUES ('#{ @merchant_id }', '#{ @tag_id }', '#{@transaction_name }', '#{@amount}', '#{@debit_credit}', '#{@transaction_date}', '#{@transaction_time}') RETURNING *"
+    transaction_data = run_sql(sql).first
+    result = Transaction.new(transaction_data)
     return result
   end
 

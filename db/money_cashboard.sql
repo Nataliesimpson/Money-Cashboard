@@ -19,6 +19,7 @@ CREATE TABLE transactions (
   transaction_name VARCHAR(255),
   amount INT4,
   debit_credit VARCHAR(255),
-  date_time DATE
+  transaction_date DATE, 
+  transaction_time TIME
 );
 

@@ -38,7 +38,7 @@ class Account
 
   def total_balance
     balance = 0
-    # @transactions.each do |transaction|
+
     for transaction in @transactions
 
       if transaction.debit_credit == 'credit'

@@ -23,5 +23,32 @@ class Merchant
     run_sql(sql)
   end
 
+  def self.all()
+    sql = "SELECT * FROM merchants"
+    return Merchant.map_items(sql)
+  end
+
+  def self.map_items( sql )
+    merchant = run(sql)
+    result = merchant.map { |merchant| Book.new( merchant ) }
+    return result
+  end
+
+  def self.map_item( sql )
+    result = Merchant.map_items(sql)
+    return result.first
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM merchants WHERE id = #{id}"
+    return Merchant.map_item( sql )
+  end 
+
+  def transactions()
+    sql = "SELECT * FROM transactions WHERE merchant_id = #{@id}"
+    return Member.map_items( sql )
+  end
+  
+
 end
 
