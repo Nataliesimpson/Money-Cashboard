@@ -21,10 +21,25 @@ html, body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: museo_sans_rounded100,helvetica,tahoma,sans-serif;
+    /*text-transform: uppercase;*/
 }
 
 .nav li a:hover {
     background-color: #111;
 }
+
+.main {
+    background-image: url();
+    min-height: 700px;
+    background-size: cover;
+    font-family: museo_sans_rounded100,helvetica,tahoma,sans-serif;
+}
+
+
+
+
+
+
+
