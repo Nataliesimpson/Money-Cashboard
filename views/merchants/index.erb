@@ -1,5 +1,5 @@
 <a href="/merchants/new">Add new merchant</a><br>
 
 <% @merchants.each do |merchant| %>
-  <a href="/merchants/<%= merchant.id %>"><%= merchant.merchant_name %></a><br><hr>
+  <% merchant.merchant_name %> 
 <% end %>

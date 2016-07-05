@@ -1,0 +1,28 @@
+<br>
+<a href="/transactions/new">Add a new transaction</a>
+
+<h3>All transactions</h3>
+<br>
+
+<% @transactions.each do |transaction| %>
+    <b>Transaction name:</b>
+    <p><%= transaction.transaction_name() %></p>
+    <b>Amount:</b>
+    <p><%= transaction.amount() %></p>
+    <b>Debit/Credit:</b>
+    <p><%= transaction.debit_credit() %></p>
+    <b>Transaction date</b>
+    <p><%= transaction.transaction_date() %></p>
+    <b>Transaction time</b>
+    <p><%= transaction.transaction_time() %></p>
+    <b>Merchant name:</b>
+    <p><%= transaction.merchant_name() %></p>
+    <b>Tag name:</b>
+    <p><%= transaction.tag_name() %></p>
+
+    <br>
+  <!--   <a href="/transactions/<%= transaction.id %>">View</a>
+    <a href="/transactions/<%= transaction.id %>/edit">Edit</a> -->
+    <% end %>
+
+   

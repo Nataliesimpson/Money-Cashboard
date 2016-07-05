@@ -1,1 +1,41 @@
-<h2>Create Album</h2>
+<h1>Add a new transaction</h1>
+
+<form action="/transactions" method="post">
+  
+<label for= "transaction_name" >Transaction name: </label>
+<input type="text" name="transaction_name"><hr>
+
+<label for= "amount" > Amount: </label>
+<input type="number" name="amount"><hr>
+
+<label for="debit_credit" > Debit/Credit: </label>
+<input type="radio" name="debit_credit" value="debit" checked>Debit
+<input type="radio" name="debit_credit" value="credit" >Credit<br><hr>
+
+<label for="transaction_date" > Date of transaction: </label>
+<input type="date" name="transaction_date"><hr>
+
+<label for="transaction_time" > Time of transaction: </label>
+<input type="time" name="transaction_time"><hr>
+
+<label for="merchant_id"> Select merchant: </label>
+<select name="merchant_id">
+<% @merchants.each do | merchant | %>
+<option value=<%= "#{merchant.id}" %>><%= merchant.merchant_name%></option>
+<% end %>
+</select>
+<hr>
+
+<label for="tag_id"> Select category: </label>
+<select name="tag_id">
+<% @tags.each do | tag | %>
+<option value=<%= "#{tag.id}" %>><%= tag.tag_name%></option>
+<% end %>
+</select>
+<hr>
+  
+<input type="submit" value = "Add Transaction">
+
+</form>
+
+

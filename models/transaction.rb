@@ -11,7 +11,7 @@ class Transaction
   def initialize( options )
     @id = options['id'].to_i
     @merchant_id = options['merchant_id'].to_i
-    @tag_id = options['tag_id'].to_i
+    @tag_id = options['merchant_id'].to_i
     @transaction_name = options['transaction_name']
     @amount = options['amount'].to_i
     @debit_credit = options['debit_credit']
@@ -59,11 +59,19 @@ class Transaction
   end
 
   def find_tag()
-    sql = "SELECT * FROM tags WHERE id = #{tag_id}"
+    sql = "SELECT * FROM tags WHERE id = #{@tag_id}"
     return Tag.map_item(sql)
   end
 
- 
+  def merchant_name()
+    sql = "SELECT merchant_name FROM merchants WHERE id = #{@merchant_id}"
+    return Merchant.map_item(sql).merchant_name
+  end  
+
+  def tag_name()
+    sql = "SELECT tag_name FROM tags WHERE id = #{@tag_id}"
+    return Tag.map_item(sql).tag_name
+  end
 
 
 
