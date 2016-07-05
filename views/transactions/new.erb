@@ -24,6 +24,8 @@
 <option value=<%= "#{merchant.id}" %>><%= merchant.merchant_name%></option>
 <% end %>
 </select>
+
+<a href="/merchants/new">Add a new merchant</a><br>
 <hr>
 
 <label for="tag_id"> Select category: </label>
@@ -32,6 +34,8 @@
 <option value=<%= "#{tag.id}" %>><%= tag.tag_name%></option>
 <% end %>
 </select>
+
+<a href="/tags/new">Add a new category</a><br>
 <hr>
   
 <input type="submit" value = "Add Transaction">

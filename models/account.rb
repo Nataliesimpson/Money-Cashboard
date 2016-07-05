@@ -55,6 +55,40 @@ class Account
     return total_number.count
   end  
 
+  def total_income
+    balance = 0
+
+    for transaction in @transactions
+
+    if transaction.debit_credit == 'credit'
+    balance += transaction.amount
+    end
+    end
+      return balance
+  end  
+
+  def total_expenses
+    balance = 0
+
+    for transaction in @transactions
+
+    if transaction.debit_credit == 'debit'
+    balance += transaction.amount
+    end
+    end
+      return balance
+  end  
+
+  # def total_by_tag
+  #   balance = 0
+
+  #   for transaction in @transactions
+  #   if transaction.tag_id == @tag_id
+  #   balance += transaction.amount
+  #   end
+  #   end
+  #     return balance
+  # end  
 
 
 end

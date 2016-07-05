@@ -94,6 +94,21 @@ class TestAccount < Minitest::Test
     assert_equal(3, result)
   end  
 
+  def test_total_income
+    result = @account.total_income
+    assert_equal(0, result)
+  end  
+
+  def test_total_expenses
+    result = @account.total_expenses
+    assert_equal(140, result)
+  end 
+
+  # def test_total_by_tag
+  #   result = @account.total_by_tag
+  #   assert_equal(70, result)
+  # end  
+
 
 end
 
