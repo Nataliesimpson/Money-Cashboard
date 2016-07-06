@@ -10,13 +10,13 @@ class TestAccount < Minitest::Test
 
   def setup
 
-    tag1 = Tag.new({'id' => 1, 'name' => 'Utilities'})
-    tag2 = Tag.new({'id' => 2, 'name' => 'Petrol'})
-    tag3 = Tag.new({'id' => 2, 'name' => 'Travel'})
+    tag1 = Tag.new({'id' => 1, 'tag_name' => 'Utilities'})
+    tag2 = Tag.new({'id' => 2, 'tag_name' => 'Petrol'})
+    tag3 = Tag.new({'id' => 2, 'tag_name' => 'Travel'})
 
-    merchant1 = Merchant.new({'id' => 1, 'name' => 'Scottish Power'}),
-    merchant2 = Merchant.new({'id' => 2, 'name' => 'Asda'}),
-    merchant3 = Merchant.new({'id' => 3, 'name' => 'Lothian buses'})    
+    merchant1 = Merchant.new({'id' => 1, 'merchant_name' => 'Scottish Power'}),
+    merchant2 = Merchant.new({'id' => 2, 'merchant_name' => 'Asda'}),
+    merchant3 = Merchant.new({'id' => 3, 'merchant_name' => 'Lothian buses'})    
 
     transaction1 = Transaction.new({
       'id' => 1,
@@ -104,10 +104,17 @@ class TestAccount < Minitest::Test
     assert_equal(140, result)
   end 
 
-  # def test_total_by_tag
-  #   result = @account.total_by_tag
-  #   assert_equal(70, result)
-  # end  
+ # def test_all_tags_names
+ #   result = @account.all_tag_names
+ #   expectation = ['Utilities', 'Petrol', 'Travel']
+ #   assert_equal(expectation, result)
+ # end
+
+ # def test_aamount_by_tag
+ #   result = @account.amount_by_tag
+ #   expectation = [70, 15, 55]
+ #   assert_equal(expectation, result)
+ # end
 
 
 end

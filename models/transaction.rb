@@ -17,7 +17,6 @@ class Transaction
     @debit_credit = options['debit_credit']
     @transaction_date = options['transaction_date']
     @transaction_time = options['transaction_time']
-    # @date_time = DateTime.parse(options['date_time']).to_date
   end
 
   def save()
@@ -32,10 +31,18 @@ class Transaction
     run_sql(sql)
   end
 
-  def self.all()
-    sql = "SELECT * FROM transactions"
-    return Transaction.map_items(sql)
-  end
+  # def self.all()
+  #   sql = "SELECT * FROM transactions"
+  #   return Transaction.map_items(sql)
+  # end
+
+  def self.all(query = "", query_type = "")
+     query = query.to_s
+     query_type = query_type.to_s
+     sql = "SELECT * FROM transactions"
+     sql = sql + " WHERE tag_id = #{query}" if query != "" && query_type == "tag"
+     return Transaction.map_items(sql)
+   end
 
   def self.map_items( sql )
     transactions = run_sql(sql)

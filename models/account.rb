@@ -79,16 +79,17 @@ class Account
       return balance
   end  
 
-  # def total_by_tag
-  #   balance = 0
-
-  #   for transaction in @transactions
-  #   if transaction.tag_id == @tag_id
-  #   balance += transaction.amount
-  #   end
-  #   end
-  #     return balance
-  # end  
+  def total_expenditure_by_tag(tag_id)
+     total = 0
+     @transactions.each do |transaction|
+     total += transaction.amount if transaction.tag_id == tag_id
+   end
+   return total
+  end
 
 
 end
+
+
+
+

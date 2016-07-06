@@ -1,3 +1,16 @@
+<form method="get">
+<label for="search">Search by tag:</label>
+<select name="search">
+<option value=""></option>
+<% @tags.each do |tag|%>
+<option value="<%=tag.id%>"><%=tag.tag_name %></option>
+<% end %>
+</select>
+<input type="hidden" name="search_type" value="tag">
+<input type="submit" value="search" >
+</form>
+
+
 <h4>Total expenditure</h4>
 <p>£<%=@account.total_expenditure %></p>
 
@@ -11,7 +24,7 @@
 <p>£<%=@account.total_balance %></p>
 
 <h4>Total number of transactions</h4>
-<p>£<%=@account.total_number_transactions %></p>
+<p><%=@account.total_number_transactions %></p>
 
 <h4>Total income</h4>
 <p>£<%=@account.total_income %></p>
@@ -19,7 +32,12 @@
 <h4>Total expenses</h4>
 <p>£<%=@account.total_expenses %></p>
 
-<h4>Total expenses by category</h4>
+<h4>Totals by tag</h4>
+<% @tags.each do |tag| %><br>
+<%= tag.tag_name %> - <%= @account.total_expenditure_by_tag(tag.id)  %><br>
+<% end %>
+
+
 
 
 
