@@ -1,41 +1,156 @@
 html, body {
-  margin: 5px;
-  padding: 5px;
+  margin: 0px;
+  padding: 0px;
 }
 
-.nav ul {
+.go_left {
+  float: left;
+}
+
+.go_right {
+  float: right;
+}
+
+.logo{
+  color: white;
+  line-height: 65px;
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#home_background_image {
+    height: 80em;
+    width: 100%;
+    background: url('Lunch.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    left: 12em;
+    bottom:4em;
+    color: white;
+}
+
+nav {
+  background-color: black;
+  height: 65px;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+}
+
+nav ul {
+  padding-left: 10px;
+  margin: 0px;
+  list-style-type: none;
+  line-height: 60px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 95px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  line-height: 65px;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav ul li a:hover {
+    background-color: #47b8e0;
+    line-height: 100%;
+}
+
+/*nav {
+  background-color: purple;
+  height: 65px;
+  left:0px;
+  top:0px;
+  position: fixed;
+  width: 100%;
+}
+
+nav ul {
     list-style-type: none;
     margin: 0;
-    padding-left: 5px;
+    padding-left: 15px;
     overflow: hidden;
-    background-color: #6A5ACD;
+    background-color: black;
 }
 
-.nav li {
+nav ul li {
     float: left;
 }
 
-.nav li a {
+nav ul li a {
     display: block;
     color: #ffffff;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 25px;
     text-decoration: none;
-    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     font-family: museo_sans_rounded100,helvetica,tahoma,sans-serif;
-    /*text-transform: uppercase;*/
-}
+    text-transform: uppercase;
+    }
 
-.nav li a:hover {
-    background-color: #111;
-}
+nav ul li a:hover {
+    background-color: #47b8e0;
+}*/
 
-.main {
-    background-image: url();
+main {
+    /*background-image: url();
     min-height: 700px;
-    background-size: cover;
+    background-size: cover;*/
     font-family: museo_sans_rounded100,helvetica,tahoma,sans-serif;
+    margin: 0px;
 }
+
+
+table {
+    margin: 0;
+}
+
+tr:hover{   
+}
+
+th{
+}
+
+td{
+}
+
+footer {
+  background-color: #47b8e0;
+  height: 40px;
+  text-align: right;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  color: white;
+}
+
+h4{
+  margin: 10px;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  padding-right: 10px;
+}
+
+
 
 
 

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang 'en'>
 <head>
-  <title>MoneyCashboard</title>
+  <meta charset="utf-8">
+  <title>£ MoneyCashboard</title>
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
-<div class="nav">
+
+<nav>
+<div class="go_left">
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/account">Account</a></li>
@@ -13,10 +16,21 @@
   </ul>
 </div>
 
+<div class="go_right">
+  <div class="logo">
+  Login
+    </div>
+  </div>
+</nav>  
+
 <div class="main">
 
 <%= yield %>
 </div>
+
+<footer>
+  <h4>MoneyCashboard&copy 2016</h4>
+  </footer>
 
 </body>
 </html>

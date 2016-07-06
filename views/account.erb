@@ -32,11 +32,24 @@
 <h4>Total expenses</h4>
 <p>£<%=@account.total_expenses %></p>
 
-<h4>Totals by tag</h4>
+<table>
+  <thead>
+    <tr>
+    <th>Colour</th>
+    <th>Tag</th>
+    <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
 <% @tags.each do |tag| %><br>
-<%= tag.tag_name %> - <%= @account.total_expenditure_by_tag(tag.id)  %><br>
+<tr>
+<td></td>
+<td><%= tag.tag_name %></td>
+<td><%= @account.total_expenditure_by_tag(tag.id)  %></td>
+</tr>
 <% end %>
-
+</tbody>
+</table>
 
 
 
