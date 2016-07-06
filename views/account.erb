@@ -1,3 +1,5 @@
+
+<div id="search_form">
 <form method="get">
 <label for="search">Search by tag:</label>
 <select name="search">
@@ -9,8 +11,44 @@
 <input type="hidden" name="search_type" value="tag">
 <input type="submit" value="search" >
 </form>
+</div>
 
+<div class="searchstats">
 
+  <p class="stats">
+    £<%=@account.total_income %>
+    <br>
+    money in
+    </p>
+  <p class="stats">
+    £<%=@account.total_expenses %> 
+    <br>
+    money out
+    </p>
+  <p class="stats">
+    <%=@account.total_number_transactions %> 
+    <br>
+    transactions
+    </p>
+  <p class="stats">
+    £<%=@account.total_balance %>
+    <br>
+    balance
+    </p>
+   <p class="stats">
+     £<%=@account.most_expensive_transaction_amount %>
+    <br>
+     priciest buy
+    </p> 
+   <p class="stats">
+     £<%=@account.least_expensive_transaction_amount %>
+    <br>
+     bargain buy
+    </p>  
+    </div>
+
+  
+<!-- 
 <h4>Total expenditure</h4>
 <p>£<%=@account.total_expenditure %></p>
 
@@ -30,20 +68,25 @@
 <p>£<%=@account.total_income %></p>
 
 <h4>Total expenses</h4>
-<p>£<%=@account.total_expenses %></p>
+<p>£<%=@account.total_expenses %></p> -->
 
 <table>
+<colgroup>
+   <col style="width:10%">
+   <col style="width:45%">
+   <col style="width:45%">
+ </colgroup>  
   <thead>
     <tr>
-    <th>Colour</th>
-    <th>Tag</th>
+    <th>></th>
+    <th>Category</th>
     <th>Amount</th>
     </tr>
   </thead>
   <tbody>
 <% @tags.each do |tag| %><br>
 <tr>
-<td></td>
+<td>></td>
 <td><%= tag.tag_name %></td>
 <td><%= @account.total_expenditure_by_tag(tag.id)  %></td>
 </tr>

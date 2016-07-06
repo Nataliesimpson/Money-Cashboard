@@ -1,33 +1,34 @@
-<br>
-<a href="/transactions/new">Add a new transaction</a>
+<h5>a</h5>
+<hr>
 
-<h2>Transactions last 90 days</h2>
-<br>
-
-
-
-
-
-<% @transactions.each do |transaction| %>
-    <b>Transaction name:</b>
-    <p><%= transaction.transaction_name() %></p>
-    <b>Amount:</b>
-    <p><%= transaction.amount() %></p>
-    <b>Debit/Credit:</b>
-    <p><%= transaction.debit_credit() %></p>
-    <b>Transaction date</b>
-    <p><%= transaction.transaction_date() %></p>
-    <b>Transaction time</b>
-    <p><%= transaction.transaction_time() %></p>
-    <b>Merchant name:</b>
-    <p><%= transaction.merchant_name() %></p>
-    <b>Tag name:</b>
-    <p><%= transaction.tag_name() %></p>
-
-    <br>
-
+<h3>Transactions last 90 days: <a href="/transactions/new">Add a new transaction</a></h3>
+<table>
+  <thead>
+    <tr>
+    <th>Description</th>
+    <th>Amount</th>
+    <th>Debit/Credit</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Merchant</th>
+    <th>Category</th>
+    </tr>
+    </thead>
+    <tbody><% @transactions.each do |transaction| %>
+    <tr>
+    <td><%= transaction.transaction_name() %></td>
+    <td>£<%= transaction.amount() %></td>
+    <td><%= transaction.debit_credit() %></td>
+    <td><%= transaction.transaction_date() %></td>
+    <td><%= transaction.transaction_time() %></td>
+    <td><%= transaction.merchant_name() %></td>
+    <td><%= transaction.tag_name() %></td>
+    </tr>
     <% end %>
+    </tbody>
+    </table>
 
-  
+    </div>
+
 
    

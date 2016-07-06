@@ -1,5 +1,8 @@
+
+
 <h1>Add a new transaction</h1>
 
+<div id="transaction_form">
 <form action="/transactions" method="post">
   
 <label for= "transaction_name" >Transaction name: </label>
@@ -25,7 +28,8 @@
 <% end %>
 </select>
 
-<a href="/merchants/new">Add a new merchant</a><br>
+
+<a href="/merchants/new"> Add a new merchant</a><br>
 <hr>
 
 <label for="tag_id"> Select category: </label>
@@ -35,11 +39,12 @@
 <% end %>
 </select>
 
-<a href="/tags/new">Add a new category</a><br>
+<a href="/tags/new"> Add a new category</a><br>
 <hr>
   
 <input type="submit" value = "Add Transaction">
 
 </form>
+</div>
 
 

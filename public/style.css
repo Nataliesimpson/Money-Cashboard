@@ -1,6 +1,7 @@
-html, body {
+html, body { 
   margin: 0px;
   padding: 0px;
+  background-color: ;
 }
 
 .go_left {
@@ -14,7 +15,7 @@ html, body {
 .logo{
   color: white;
   line-height: 65px;
-  margin-right: 50px;
+  margin-right: 55px;
   font-size: 20px;
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
@@ -27,23 +28,25 @@ html, body {
     background-size: cover;
 }
 
+
 h2 {
     font-size: 50px;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
     position: relative;
-    left: 12em;
+    left: 13em;
     bottom:4em;
     color: white;
 }
 
 nav {
-  background-color: black;
+  background-color: #34314c;
   height: 65px;
   left: 0px;
   top: 0px;
   position: fixed;
   width: 100%;
+  border-bottom: solid 0.5px #ffc952;
 }
 
 nav ul {
@@ -55,7 +58,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  margin-right: 95px;
+  margin-right: 75px;
 }
 
 nav ul li a {
@@ -70,65 +73,78 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #47b8e0;
-    line-height: 100%;
 }
 
-/*nav {
-  background-color: purple;
-  height: 65px;
-  left:0px;
-  top:0px;
-  position: fixed;
-  width: 100%;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 15px;
-    overflow: hidden;
-    background-color: black;
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 25px;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-family: museo_sans_rounded100,helvetica,tahoma,sans-serif;
-    text-transform: uppercase;
-    }
-
-nav ul li a:hover {
-    background-color: #47b8e0;
-}*/
 
 main {
-    /*background-image: url();
-    min-height: 700px;
-    background-size: cover;*/
-    font-family: museo_sans_rounded100,helvetica,tahoma,sans-serif;
-    margin: 0px;
+    position: fixed;
 }
 
+.searchstats {
+    float: right;
+    text-align: right;
+    margin-top: 180px;
+    margin-left: 20px;
+}
+
+p {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+    text-transform: none;
+    margin: 0 18px 0 0;
+    padding-bottom: 10px;
+    color: #34314c;
+}
 
 table {
-    margin: 0;
+    margin-top: 0px;
+    margin: 50px;
+    width: 90%;
+    table-layout: relative;
+    height: 250px;
+    /*overflow-x: auto;*/
+    border: 2px solid;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: #34314c;
 }
 
-tr:hover{   
+tr :hover{   
+    background-color: #47b8e0;
 }
 
-th{
+th {
+    padding: 15px 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: #34314c;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    background-color: none;
+    border-radius: 0px;
+    border-bottom: solid 2px;
+    background-color: none;
 }
 
-td{
+td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 16px;
+    color: #34314c;
+    border-bottom: solid 1px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    /*border-top: solid 1px;*/
 }
 
 footer {
@@ -140,6 +156,7 @@ footer {
   bottom: 0px;
   width: 100%;
   color: white;
+  border-top: solid 1px #ffc952;
 }
 
 h4{
@@ -147,8 +164,114 @@ h4{
   font-size: 15px;
   font-weight: 300;
   font-family: 'Open Sans', sans-serif;
-  padding-right: 10px;
+  padding-right: 15px;
 }
+
+h3{
+  margin: 25px;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  padding-right: 15px;
+  text-align: center;
+}
+
+h3 a {
+    color: #47b8e0;
+    text-decoration: none;
+}
+
+h3 a:hover {
+    color: #ffc952;
+}
+
+h5 {
+    color: white;
+}
+
+#search_form {
+    margin-top: 180px;
+    margin-left: 8px;
+    position: relative;
+    float: left;
+     width: 300px;
+     height: 35px;
+     font-family: 'Open Sans', sans-serif;
+     text-align: center;
+     font-size: 18px;
+     line-height: 24px;
+     font-weight: 400;
+     color: #47b8e0;
+     text-decoration: none;
+     border-radius: 10px;
+     padding: 8px;
+     border: 2px solid #47b8e0;
+     border: inset 2px solid #47b8e0;
+     vertical-align: middle;
+}
+
+#transaction_form {
+    margin: auto;
+    position: relative;
+    width: 600px;
+    height: 320px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 350;
+    color: #34314c;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #34314c;
+    border: inset 2px solid #333;
+    }
+
+ #transaction_form a {
+    text-decoration: none;
+    color: #47b8e0;
+ }   
+
+ #transaction_form a:hover {
+     color: #ffc952;
+ }
+
+ #merchant_form {
+    margin: auto;
+    position: relative;
+    width: 400px;
+    height: 120px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 300;
+    color: #34314c;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1.5px solid #34314c;
+    border: inset 2px solid #333;
+ }
+
+ #tag_form {
+    margin: auto;
+    position: relative;
+    width: 600px;
+    height: 320px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 350;
+    color: #34314c;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #34314c;
+    border: inset 2px solid #333;
+ }
 
 
 

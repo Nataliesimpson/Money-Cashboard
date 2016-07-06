@@ -22,6 +22,7 @@ merchant11 = Merchant.new({ 'merchant_name' => 'Scottish Power'}).save
 merchant12 = Merchant.new({ 'merchant_name' => 'Animals Asia'}).save
 merchant13 = Merchant.new({ 'merchant_name' => 'Santander'}).save
 merchant14 = Merchant.new({ 'merchant_name' => 'National Lottery'}).save
+merchant15 = Merchant.new({ 'merchant_name' => 'Pret a Manger'}).save
 
 tag1 = Tag.new({ 'tag_name' => 'Groceries' }).save()
 tag2 = Tag.new({ 'tag_name' => 'Clothing' }).save()

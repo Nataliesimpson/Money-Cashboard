@@ -42,7 +42,7 @@ class Transaction
      sql = "SELECT * FROM transactions"
      sql = sql + " WHERE tag_id = #{query}" if query != "" && query_type == "tag"
      return Transaction.map_items(sql)
-   end
+  end
 
   def self.map_items( sql )
     transactions = run_sql(sql)
