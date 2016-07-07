@@ -83,7 +83,7 @@ main {
 .searchstats {
     float: right;
     text-align: right;
-    margin-top: 180px;
+    margin-top: 400px;
     margin-left: 20px;
 }
 
@@ -190,7 +190,7 @@ h5 {
 }
 
 #search_form {
-    margin-top: 180px;
+    margin-top: 400px;
     margin-left: 8px;
     position: relative;
     float: left;
@@ -304,6 +304,24 @@ h5 {
  #new_transaction a:hover {
      color: #ffc952;
  }
+
+ #merchant_new p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
+    display: block;
+ }
+
+ #merchant_new h4 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
+    display: block;
+    font-size: 30px;
+    margin-top: 3px;
+  }
 
  #merchant_new a {
   font-family: 'Open Sans', sans-serif;
