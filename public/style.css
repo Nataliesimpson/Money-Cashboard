@@ -273,6 +273,83 @@ h5 {
     border: inset 2px solid #333;
  }
 
+ #new_transaction p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
+    display: block;
+ }
+
+ #new_transaction h4 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
+    display: block;
+    font-size: 30px;
+    margin-top: 3px;
+ }
+
+ #new_transaction a {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    margin-top: 8px;
+ }
+
+ #new_transaction a:hover {
+     color: #ffc952;
+ }
+
+ #merchant_new a {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  line-height: 25px;
+  text-decoration: none;
+  display: block;
+  font-size: 25px;
+  margin-top: 8px;
+ }
+
+ #merchant_new a:hover {
+     color: #ffc952;
+ }
+
+ #tag_new p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
+    display: block;
+ }
+
+ #tag_new h4 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
+    display: block;
+    font-size: 30px;
+    margin-top: 3px;
+  }
+
+  #tag_new a {
+   font-family: 'Open Sans', sans-serif;
+   text-align: center;
+   line-height: 25px;
+   text-decoration: none;
+   display: block;
+   font-size: 25px;
+   margin-top: 8px;
+  }
+
+#tag_new a:hover {
+     color: #ffc952;
+ }   
 
 
 

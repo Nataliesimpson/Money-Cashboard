@@ -9,7 +9,7 @@ end
 post '/tags' do
   @tag = Tag.new(params)
   @tag.save
-  redirect to ( "tags" )
+  erb :'tags/create'
 end
 
 #index - print out all our current tags

@@ -22,7 +22,7 @@ merchant11 = Merchant.new({ 'merchant_name' => 'Scottish Power'}).save
 merchant12 = Merchant.new({ 'merchant_name' => 'Animals Asia'}).save
 merchant13 = Merchant.new({ 'merchant_name' => 'Santander'}).save
 merchant14 = Merchant.new({ 'merchant_name' => 'National Lottery'}).save
-merchant15 = Merchant.new({ 'merchant_name' => 'Pret a Manger'}).save
+
 
 tag1 = Tag.new({ 'tag_name' => 'Groceries' }).save()
 tag2 = Tag.new({ 'tag_name' => 'Clothing' }).save()
@@ -65,8 +65,15 @@ transaction12 = Transaction.new({'merchant_id' => merchant12.id, 'tag_id' => tag
 
 transaction13 = Transaction.new({'merchant_id' => merchant13.id, 'tag_id' => tag13.id, 'transaction_name' => 'Monthly interest', 'amount' => 5, 'debit_credit' => 'credit', 'transaction_date' => '2016-07-10', 'transaction_time' => '08:58'}).save
 
-transaction10 = Transaction.new({'merchant_id' => merchant10.id, 'tag_id' => tag10.id, 'transaction_name' => 'Lottery ticket', 'amount' => 2, 'debit_credit' => 'debit', 'transaction_date' => '2016-07-15', 'transaction_time' => '17:15'}).save
+transaction14 = Transaction.new({'merchant_id' => merchant14.id, 'tag_id' => tag14.id, 'transaction_name' => 'Lottery ticket', 'amount' => 2, 'debit_credit' => 'debit', 'transaction_date' => '2016-07-15', 'transaction_time' => '17:15'}).save
+
 
 
 binding.pry
 nil
+
+
+
+
+
+
